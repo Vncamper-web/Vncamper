@@ -3,105 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vncamper - Tự do trên mọi hành trình</title>
+  <title>Vncamper - Hiện thực hóa giấc mơ Vanlife</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hiệu ứng cuộn mượt mà */
+    html { scroll-behavior: smooth; }
+    /* Lớp phủ để chữ dễ đọc trên nền ảnh */
+    .hero-overlay { background: rgba(0, 0, 0, 0.4); }
+  </style>
 </head>
 
 <body class="bg-white text-gray-800">
 
-<!-- HERO -->
-<section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center"
-style="background-image: url('https://images.unsplash.com/photo-van-camper');">
+<!-- HERO SECTION -->
+<section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center relative"
+style="background-image: url('https://googleusercontent.com');">
+  
+  <div class="hero-overlay absolute inset-0"></div>
 
-  <h1 class="text-4xl md:text-6xl font-bold mb-4">
-    Vncamper
-  </h1>
+  <div class="relative z-10 text-white">
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
+      Vncamper
+    </h1>
 
-  <p class="text-xl md:text-2xl mb-6">
-    Tự do trên mọi hành trình
-  </p>
+    <p class="text-xl md:text-2xl mb-6 font-light italic">
+      Tự do khám phá Việt Nam theo cách của bạn
+    </p>
 
-  <p class="max-w-xl mb-8">
-    Nền tảng kết nối chủ xe mobihome và người yêu du lịch.
-    Thuê xe dễ dàng – Khám phá không giới hạn.
-  </p>
+    <p class="max-w-2xl mx-auto mb-8 text-lg opacity-90">
+      Nền tảng kết nối Mobihome chuẩn an toàn đầu tiên tại Việt Nam. <br>
+      Khám phá thiên nhiên với sự an tâm tuyệt đối.
+    </p>
 
-  <button class="bg-black text-white px-6 py-3 rounded-xl">
-    Đăng ký sớm
-  </button>
-
+    <!-- Nút này giờ sẽ nhảy xuống phần nhập Email -->
+    <a href="#register" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl">
+      Nhận ưu đãi 50% ngay
+    </a>
+  </div>
 </section>
 
-<!-- VALUE -->
-<section class="py-16 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-10">Tại sao chọn Vncamper?</h2>
+<!-- VALUE SECTION -->
+<section class="py-20 px-6 text-center bg-white">
+  <h2 class="text-3xl font-bold mb-12">Tại sao chọn Vncamper?</h2>
 
-  <div class="grid md:grid-cols-3 gap-8">
+  <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
 
     <div>
-      <h3 class="font-semibold text-xl mb-2">🚐 Thuê xe dễ dàng</h3>
-      <p>Kết nối nhanh chóng với hàng trăm xe camper trên toàn quốc</p>
+      <div class="text-5xl mb-4">🛡️</div>
+      <h3 class="font-bold text-xl mb-3">An toàn tuyệt đối</h3>
+      <p class="text-gray-600">100% xe trang bị cảm biến CO, định vị GPS và hỗ trợ Gara 24/7 trên mọi cung đường.</p>
     </div>
 
     <div>
-      <h3 class="font-semibold text-xl mb-2">💰 Tối ưu thu nhập</h3>
-      <p>Chủ xe có thể kiếm tiền từ chính chiếc xe của mình</p>
+      <div class="text-5xl mb-4">💰</div>
+      <h3 class="font-bold text-xl mb-3">Tối ưu thu nhập</h3>
+      <p class="text-gray-600">Biến chiếc xe nhàn rỗi thành cỗ máy in tiền với quy trình quản lý chuyên nghiệp.</p>
     </div>
 
     <div>
-      <h3 class="font-semibold text-xl mb-2">🌍 Trải nghiệm tự do</h3>
-      <p>Không bị bó buộc – đi đâu, dừng đâu là do bạn</p>
+      <div class="text-5xl mb-4">🌿</div>
+      <h3 class="font-bold text-xl mb-3">Trải nghiệm tự do</h3>
+      <p class="text-gray-600">Không còn rào cản kỹ thuật. Bạn chỉ cần xách vali lên và đi, mọi thứ đã có Vncamper lo.</p>
     </div>
 
   </div>
 </section>
 
-<!-- FOR USERS -->
-<section class="bg-gray-100 py-16 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-10">Dành cho bạn</h2>
+<!-- FOR USERS SECTION -->
+<section class="bg-gray-50 py-20 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-12">Dành cho cộng đồng Vanlife</h2>
 
-  <div class="grid md:grid-cols-2 gap-10">
+  <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
 
-    <div>
-      <h3 class="text-xl font-semibold mb-3">👤 Người thuê xe</h3>
-      <p>
-        Trải nghiệm du lịch kiểu mới – tự do, riêng tư, không phụ thuộc khách sạn.
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+      <h3 class="text-xl font-bold mb-3 text-orange-500">👤 Người thuê xe</h3>
+      <p class="text-gray-600">
+        Trải nghiệm du lịch kiểu mới: Riêng tư, tiện nghi và hoàn toàn làm chủ hành trình.
       </p>
     </div>
 
-    <div>
-      <h3 class="text-xl font-semibold mb-3">🚗 Chủ xe</h3>
-      <p>
-        Tận dụng xe nhàn rỗi để tạo thu nhập thụ động an toàn và hiệu quả.
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+      <h3 class="text-xl font-bold mb-3 text-orange-500">🚗 Chủ xe</h3>
+      <p class="text-gray-600">
+        Tham gia mạng lưới đối tác tin cậy, bảo vệ tài sản bằng tiêu chuẩn 20 năm ngành xe.
       </p>
     </div>
 
   </div>
 </section>
 
-<!-- CTA -->
-<section class="py-20 text-center px-6">
+<!-- CTA SECTION -->
+<section id="register" class="py-24 text-center px-6 bg-white">
 
-  <h2 class="text-3xl font-bold mb-4">
-    Sẵn sàng cho hành trình của bạn?
+  <h2 class="text-4xl font-bold mb-4">
+    Hiện thực hóa giấc mơ Vanlife
   </h2>
 
-  <p class="mb-6">
-    Đăng ký ngay để trở thành người tiên phong trong cộng đồng Vncamper
+  <p class="mb-8 text-gray-500 text-lg">
+    Đăng ký sớm để nhận gói <b>Ưu đãi 50%</b> cho 20 hành trình tiên phong.
   </p>
 
-  <input type="email" placeholder="Nhập email của bạn"
-    class="border px-4 py-2 rounded-lg mr-2">
+  <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+    <input type="email" placeholder="Nhập Email hoặc Số điện thoại"
+      class="border-2 border-gray-200 px-6 py-3 rounded-xl w-full md:w-80 focus:border-orange-500 outline-none transition-all">
 
-  <button class="bg-black text-white px-6 py-2 rounded-lg">
-    Tham gia ngay
-  </button>
+    <button class="bg-black text-white px-10 py-3 rounded-xl font-bold hover:bg-gray-800 transition-all w-full md:w-auto">
+      Tham gia ngay
+    </button>
+  </div>
+  
+  <p class="mt-6 text-sm text-gray-400">Chúng tôi cam kết bảo mật thông tin của bạn.</p>
 
 </section>
 
 <!-- FOOTER -->
-<footer class="text-center py-6 text-sm text-gray-500">
-  © 2026 Vncamper.vn – All rights reserved
+<footer class="text-center py-10 border-t border-gray-100 text-sm text-gray-400">
+  © 2026 Vncamper.vn – All rights reserved <br>
+  <span class="text-xs italic">Slogan: Hiện thực hóa giấc mơ Vanlife cho người Việt</span>
 </footer>
 
 </body>
