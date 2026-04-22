@@ -102,16 +102,27 @@
         </div>
     </section>
 
-<!-- Bản Icon màu phẳng - Đảm bảo hiện 100% -->
+<!-- Nút liên hệ nổi: Bản nhúng mã trực tiếp - Đảm bảo hiện 100% -->
+<style>
+    .contact-buttons { position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
+    .contact-icon { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; border: none; text-decoration: none; }
+    .zalo-bg { background: #0068ff; }
+    .messenger-bg { background: #0084ff; }
+    .contact-icon svg { width: 32px; height: 32px; fill: white; } /* Logo màu trắng nổi bật */
+    .contact-icon:hover { transform: scale(1.1); }
+</style>
+
 <div class="contact-buttons">
-    <a href="https://zalo.me" class="contact-icon" style="background: #0068ff;" target="_blank">
-        <i class="fa-solid fa-comment-dots" style="color: white; font-size: 24px;"></i>
+    <!-- Nút Zalo (Sếp thay số đt thật vào chỗ 0901234567) -->
+    <a href="https://zalo.me" class="contact-icon zalo-bg" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.46 12.22l-1.5 1.5c-.15.15-.35.22-.55.22s-.4-.07-.55-.22l-4.46-4.46c-.3-.3-.3-.78 0-1.08.3-.3.78-.3 1.08 0l3.92 3.92 3.92-3.92c.3-.3.78-.3 1.08 0s.3.78 0 1.08l-2.99 2.96z"/></svg>
     </a>
-    <a href="https://m.me" class="contact-icon" style="background: #0084ff;" target="_blank">
-        <i class="fa-brands fa-facebook-messenger" style="color: white; font-size: 24px;"></i>
+    
+    <!-- Nút Messenger -->
+    <a href="https://m.me" class="contact-icon messenger-bg" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.36 2 2 6.13 2 11.23c0 2.9 1.44 5.48 3.7 7.2l-.07 2.57 2.45-1.35c.61.17 1.25.26 1.92.26 5.64 0 10-4.13 10-9.23S17.64 2 12 2zm1.18 12.33l-2.04-2.18-3.98 2.18 4.38-4.66 2.09 2.18 3.92-2.18-4.37 4.66z"/></svg>
     </a>
 </div>
-
     <footer style="text-align: center; padding: 40px; color: #888; font-size: 0.9rem;">
         &copy; 2026 Vncamper - Nhà di động, An toàn thật.
     </footer>
