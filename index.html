@@ -4,45 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vncamper - Nền tảng kết nối Mobihome Việt Nam</title>
+    <!-- Dan đã thay bằng link FontAwesome chuẩn nhất để hiện icon khiên, biểu đồ... -->
+    <link href="https://cloudflare.com" rel="stylesheet">
     <style>
         :root { --primary: #f39200; --dark: #1a1a1a; --light: #ffffff; --gray: #f9f9f9; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: var(--dark); line-height: 1.6; scroll-behavior: smooth; }
         
+        /* Hero Section */
         .hero { 
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
-                        url(https://github.com/Vncamper-web/Vncamper/blob/main/Hero-bg1.webp?raw=true) no-repeat center center/cover;
+                        url('https://github.com') no-repeat center center/cover;
             height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--light);
             padding: 0 20px;
         }
-        .hero-content h1 { font-size: 3.2rem; margin-bottom: 10px; font-weight: 800; color: var(--primary); text-shadow: 2px 4px 8px rgba(0,0,0,0.5); }
-        .hero-content p { font-size: 1.1rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; font-weight: 800; color: var(--primary); text-shadow: 2px 4px 8px rgba(0,0,0,0.5); }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; text-shadow: 1px 2px 4px rgba(0,0,0,0.5); }
         
         .btn-group { display: flex; flex-direction: column; gap: 15px; align-items: center; }
         .btn { padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; width: 85%; max-width: 280px; text-align: center; }
         .btn-primary { background: var(--primary); color: var(--light); box-shadow: 0 4px 15px rgba(243, 146, 0, 0.4); }
         .btn-outline { border: 2px solid var(--light); color: var(--light); }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
 
+        /* Section & Grid */
         .section { padding: 80px 20px; text-align: center; max-width: 1100px; margin: auto; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
         .card { padding: 40px 30px; border-radius: 20px; background: var(--gray); transition: 0.3s; border: 1px solid #eee; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        /* CSS cho Icon hiện lên màu cam rực rỡ */
+        .card i { font-size: 3.5rem; color: var(--primary); margin-bottom: 25px; display: block; }
         
-        /* CSS cho Icon dùng mã SVG */
-        .icon-svg { width: 60px; height: 60px; fill: var(--primary); margin-bottom: 20px; display: inline-block; }
-        
-        .form-container { background: var(--dark); color: var(--light); padding: 50px 30px; border-radius: 25px; margin-top: 40px; }
-        .form-container h2 { color: var(--primary); }
+        /* Form đăng ký */
+        .form-container { background: var(--dark); color: var(--light); padding: 50px 30px; border-radius: 25px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .form-container h2 { color: var(--primary); margin-bottom: 10px; }
         input, select { width: 100%; padding: 15px; margin: 12px 0; border-radius: 8px; border: 1px solid #333; background: #222; color: #fff; box-sizing: border-box; }
-        .btn-submit { background: var(--primary); color: var(--light); border: none; cursor: pointer; font-size: 1.1rem; margin-top: 20px; font-weight: 800; width: 100%; padding: 18px; border-radius: 8px; text-transform: uppercase; }
+        .btn-submit { background: var(--primary); color: var(--light); border: none; cursor: pointer; font-size: 1.1rem; margin-top: 20px; font-weight: 800; width: 100%; padding: 18px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; }
 
+        /* Nút liên hệ nổi ở góc màn hình */
         .contact-buttons { position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
-        .contact-icon { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; }
+        .contact-icon { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 26px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); text-decoration: none; transition: 0.3s; }
         .zalo-color { background: #0068ff; }
         .messenger-color { background: #0084ff; }
-        .contact-icon svg { width: 30px; height: 30px; fill: white; }
+        .contact-icon:hover { transform: scale(1.1); }
 
         @media (min-width: 768px) {
             .btn-group { flex-direction: row; justify-content: center; }
-            .hero-content h1 { font-size: 4.2rem; }
+            .hero-content h1 { font-size: 4.5rem; }
         }
     </style>
 </head>
@@ -63,27 +70,24 @@
         <h2>Tại sao chọn Vncamper?</h2>
         <div class="grid">
             <div class="card">
-                <!-- Icon Tấm khiên SVG -->
-                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                <i class="fa-solid fa-shield-halved"></i> <!-- Icon Tấm khiên bảo hiểm -->
                 <h3>An toàn tuyệt đối</h3>
                 <p>100% xe trang bị cảm biến CO, GPS, bảo hiểm 100% tài sản và mạng lưới Gara hỗ trợ 24/7 toàn quốc.</p>
             </div>
             <div class="card">
-                <!-- Icon Biểu đồ SVG -->
-                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                <i class="fa-solid fa-chart-line"></i> <!-- Icon Biểu đồ thu nhập -->
                 <h3>Tối ưu thu nhập</h3>
                 <p>Khai thác hiệu quả xe nhàn rỗi. Tham gia mạng lưới 20 chuyến đi kiểu mẫu đầu tiên cùng KOC nổi tiếng.</p>
             </div>
             <div class="card">
-                <!-- Icon Nhóm người SVG -->
-                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                <i class="fa-solid fa-users-gear"></i> <!-- Icon Hệ sinh thái -->
                 <h3>Hệ sinh thái đối tác</h3>
                 <p>Quy trình vận hành chuẩn 20 năm ngành xe. Hỗ trợ pháp lý, xử lý phạt nguội và kết nối bãi cắm trại chuyên nghiệp.</p>
             </div>
         </div>
     </section>
 
- <section id="register" class="section">
+    <section id="register" class="section">
         <div class="form-container">
             <h2>ĐĂNG KÝ ĐỐI TÁC CHỦ XE</h2>
             <p>Nhận ngay ưu đãi 0% phí sàn trong 3 tháng đầu dành cho 20 chủ xe tiên phong.</p>
@@ -100,45 +104,20 @@
                 <button type="submit" class="btn-submit">GỬI THÔNG TIN NGAY</button>
             </form>
         </div>
-
-            <p>Nhận ngay ưu đãi 0% phí sàn trong 3 tháng đầu dành cho 20 chủ xe tiên phong.</p>
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Họ và tên của bạn" required>
-                <input type="tel" name="phone" placeholder="Số điện thoại Zalo" required>
-                <select name="car-type" required>
-                    <option value="">Loại xe bạn đang sở hữu?</option>
-                    <option value="van">Xe Van (Hiace, Starex...)</option>
-                    <option value="pickup">Xe Bán tải (Pickup)</option>
-                    <option value="luxury">Mobihome Sang trọng</option>
-                    <option value="other">Loại xe khác</option>
-                </select>
-                <button type="submit" class="btn-submit">GỬI THÔNG TIN NGAY</button>
-            </form>
-        </div>
     </section>
 
-<!-- Bộ nút liên hệ: Dùng Logo Chuẩn từ thư viện thương hiệu -->
-<style>
-    .contact-buttons { position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
-    .contact-icon { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; background: white; text-decoration: none; overflow: hidden; }
-    /* Sử dụng hình ảnh trực tiếp để đảm bảo logo chuẩn 100% */
-    .contact-icon img { width: 100%; height: 100%; object-fit: cover; }
-    .contact-icon:hover { transform: scale(1.15); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
-</style>
+    <!-- Nút liên hệ nổi ở góc dưới bên phải -->
+    <div class="contact-buttons">
+        <!-- Sếp thay SỐ ĐIỆN THOẠI Zalo sau zalo.me/ và ID FANPAGE sau m.me/ nhé -->
+        <a href="https://zalo.me" class="contact-icon zalo-color" target="_blank">
+            <i class="fa-solid fa-comment-dots"></i>
+        </a>
+        <a href="https://m.me" class="contact-icon messenger-color" target="_blank">
+            <i class="fa-brands fa-facebook-messenger"></i>
+        </a>
+    </div>
 
-<div class="contact-buttons">
-    <!-- Zalo Official Logo -->
-    <a href="https://zalo.me" class="contact-icon" target="_blank">
-        <img src="https://wikimedia.org" alt="Zalo">
-    </a>
-    
-    <!-- Messenger Official Logo -->
-    <a href="https://m.me" class="contact-icon" target="_blank">
-        <img src="https://wikimedia.org" alt="Messenger">
-    </a>
-</div>
-
-    <footer style="text-align: center; padding: 40px; color: #888; font-size: 0.9rem;">
+    <footer style="text-align: center; padding: 40px; color: #888; font-size: 0.9rem; background: #f4f4f4;">
         &copy; 2026 Vncamper - Nhà di động, An toàn thật.
     </footer>
 
