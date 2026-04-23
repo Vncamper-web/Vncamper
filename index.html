@@ -3,70 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vncamper - Tự do trên mọi hành trình</title>
+  <title>Vncamper - Cho thuê xe camper kiếm tiền</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-white text-gray-900">
 
-<!-- NAVBAR -->
-<header class="flex justify-between items-center px-6 py-4 shadow-sm">
-  <h1 class="text-2xl font-bold">Vncamper</h1>
-  <button class="bg-black text-white px-5 py-2 rounded-full">
-    Đăng ký
+<!-- NAV -->
+<header class="flex justify-between items-center px-6 py-4">
+  <h1 class="text-xl font-bold">Vncamper</h1>
+  <button onclick="scrollToForm()" class="bg-black text-white px-5 py-2 rounded-full">
+    Đăng ký xe
   </button>
 </header>
 
 <!-- HERO -->
-<section class="relative h-[80vh] flex items-center justify-center text-center px-6">
+<section class="relative h-[85vh] flex items-center px-6">
   <div class="absolute inset-0 bg-cover bg-center"
     style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');">
   </div>
-  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="absolute inset-0 bg-black/50"></div>
 
   <div class="relative z-10 text-white max-w-2xl">
+    
     <h2 class="text-4xl md:text-6xl font-bold mb-4">
-      Tự do trên mọi hành trình
+      Kiếm tiền từ xe Camper của bạn
     </h2>
 
-    <p class="text-lg mb-8">
-      Thuê xe camper dễ dàng. Biến mọi chuyến đi thành trải nghiệm sống.
+    <p class="text-lg mb-6">
+      Kết nối khách thuê trên toàn quốc. Vận hành đơn giản. Thu nhập ổn định.
     </p>
 
-    <div class="flex flex-col md:flex-row gap-3 justify-center">
-      <input id="email" type="email"
-        placeholder="Nhập email của bạn"
-        class="px-5 py-3 rounded-full text-black w-full md:w-80"/>
-
-      <button onclick="saveEmail()"
-        class="bg-white text-black px-6 py-3 rounded-full font-semibold">
-        Bắt đầu
+    <div class="flex gap-3 mb-6">
+      <button onclick="scrollToForm()" class="bg-orange-500 px-6 py-3 rounded-full font-semibold">
+        Đăng ký ngay
+      </button>
+      <button class="border border-white px-6 py-3 rounded-full">
+        Tìm hiểu thêm
       </button>
     </div>
+
+    <!-- TRUST -->
+    <div class="flex gap-6 text-sm opacity-90">
+      <span>✔ 100+ chuyến đi</span>
+      <span>✔ Hỗ trợ 24/7</span>
+      <span>✔ Bảo hiểm & GPS</span>
+    </div>
+
   </div>
 </section>
 
-<!-- VALUE -->
-<section class="py-20 px-6 text-center max-w-6xl mx-auto">
-  <h2 class="text-3xl font-bold mb-12">
-    Một nền tảng – Hai giá trị
+<!-- SOCIAL PROOF -->
+<section class="py-12 text-center">
+  <p class="text-gray-500">Đã có hơn 50+ chủ xe tham gia Vncamper</p>
+</section>
+
+<!-- BENEFITS -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-12">
+    Vì sao chủ xe chọn Vncamper?
   </h2>
 
-  <div class="grid md:grid-cols-2 gap-10">
+  <div class="grid md:grid-cols-3 gap-8">
 
-    <div class="p-8 border rounded-2xl">
-      <h3 class="text-xl font-semibold mb-3">🚐 Người thuê xe</h3>
+    <div class="p-6 border rounded-2xl">
+      <h3 class="font-semibold mb-2">💰 Tăng thu nhập</h3>
       <p class="text-gray-600">
-        Khám phá theo cách của bạn. Không khách sạn, không giới hạn,
-        chỉ có hành trình và trải nghiệm.
+        Kiếm thêm từ 10–30 triệu/tháng từ xe nhàn rỗi
       </p>
     </div>
 
-    <div class="p-8 border rounded-2xl">
-      <h3 class="text-xl font-semibold mb-3">💰 Chủ xe</h3>
+    <div class="p-6 border rounded-2xl">
+      <h3 class="font-semibold mb-2">🛡 An toàn tuyệt đối</h3>
       <p class="text-gray-600">
-        Biến chiếc xe của bạn thành nguồn thu nhập thụ động
-        với hệ thống kết nối khách thuê thông minh.
+        Theo dõi GPS, hợp đồng rõ ràng, hỗ trợ 24/7
+      </p>
+    </div>
+
+    <div class="p-6 border rounded-2xl">
+      <h3 class="font-semibold mb-2">⚙️ Vận hành đơn giản</h3>
+      <p class="text-gray-600">
+        Vncamper lo khách hàng – bạn chỉ cần giao xe
       </p>
     </div>
 
@@ -74,78 +91,124 @@
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="bg-gray-50 py-20 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-12">Cách hoạt động</h2>
+<section class="bg-gray-50 py-16 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-12">Cách tham gia</h2>
 
   <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
     <div>
-      <h3 class="font-semibold text-lg mb-2">1. Đăng ký</h3>
-      <p class="text-gray-600">Tạo tài khoản nhanh chóng</p>
+      <h3 class="font-semibold mb-2">1. Đăng ký</h3>
+      <p class="text-gray-600">Điền thông tin trong 30 giây</p>
     </div>
 
     <div>
-      <h3 class="font-semibold text-lg mb-2">2. Kết nối</h3>
-      <p class="text-gray-600">Chọn xe hoặc đăng xe</p>
+      <h3 class="font-semibold mb-2">2. Duyệt xe</h3>
+      <p class="text-gray-600">Chúng tôi kiểm tra và đăng xe</p>
     </div>
 
     <div>
-      <h3 class="font-semibold text-lg mb-2">3. Khởi hành</h3>
-      <p class="text-gray-600">Bắt đầu hành trình của bạn</p>
+      <h3 class="font-semibold mb-2">3. Kiếm tiền</h3>
+      <p class="text-gray-600">Nhận khách và bắt đầu thu nhập</p>
     </div>
 
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="py-20 text-center px-6">
-  <h2 class="text-3xl font-bold mb-6">
-    Sẵn sàng trở thành người tiên phong?
+<!-- FEATURED VEHICLES -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold mb-10 text-center">
+    Các dòng xe phổ biến
   </h2>
 
-  <p class="text-gray-600 mb-8">
-    Tham gia cộng đồng Vncamper ngay từ hôm nay
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="border rounded-2xl overflow-hidden">
+      <img src="https://images.unsplash.com/photo-van-life" class="h-40 w-full object-cover">
+      <div class="p-4">
+        <h3 class="font-semibold">Ford Transit Camper</h3>
+        <p class="text-sm text-gray-500">Thuê từ 1.5tr/ngày</p>
+      </div>
+    </div>
+
+    <div class="border rounded-2xl overflow-hidden">
+      <img src="https://images.unsplash.com/photo-campervan" class="h-40 w-full object-cover">
+      <div class="p-4">
+        <h3 class="font-semibold">Toyota Hiace Camper</h3>
+        <p class="text-sm text-gray-500">Thuê từ 1.2tr/ngày</p>
+      </div>
+    </div>
+
+    <div class="border rounded-2xl overflow-hidden">
+      <img src="https://images.unsplash.com/photo-roadtrip" class="h-40 w-full object-cover">
+      <div class="p-4">
+        <h3 class="font-semibold">Custom Mobihome</h3>
+        <p class="text-sm text-gray-500">Tuỳ cấu hình</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="form" class="py-20 px-6 bg-black text-white text-center">
+
+  <h2 class="text-3xl font-bold mb-4">
+    Đăng ký trở thành đối tác
+  </h2>
+
+  <p class="mb-8 text-gray-300">
+    Chỉ mất 30 giây – chúng tôi sẽ liên hệ ngay
   </p>
 
-  <button onclick="document.getElementById('email').focus()"
-    class="bg-black text-white px-8 py-3 rounded-full">
-    Đăng ký ngay
-  </button>
+  <div class="flex flex-col md:flex-row justify-center gap-3">
+    <input id="phone" type="text"
+      placeholder="Số điện thoại"
+      class="px-5 py-3 rounded-full text-black w-full md:w-80">
+
+    <button onclick="saveLead()"
+      class="bg-orange-500 px-6 py-3 rounded-full font-semibold">
+      Gửi thông tin
+    </button>
+  </div>
+
 </section>
 
 <!-- FOOTER -->
-<footer class="border-t py-6 text-center text-gray-500 text-sm">
+<footer class="text-center py-6 text-gray-500 text-sm">
   © 2026 Vncamper.vn
 </footer>
 
-<!-- SUPABASE -->
+<!-- SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 <script>
-  const supabaseClient = supabase.createClient(
-    "YOUR_PROJECT_URL",
-    "YOUR_ANON_KEY"
-  );
+const supabaseClient = supabase.createClient(
+  "YOUR_PROJECT_URL",
+  "YOUR_ANON_KEY"
+);
 
-  async function saveEmail() {
-    const email = document.getElementById("email").value;
+function scrollToForm(){
+  document.getElementById("form").scrollIntoView({ behavior: "smooth" });
+}
 
-    if (!email || !email.includes("@")) {
-      alert("Email không hợp lệ");
-      return;
-    }
+async function saveLead(){
+  const phone = document.getElementById("phone").value;
 
-    const { error } = await supabaseClient
-      .from("leads")
-      .insert([{ email }]);
-
-    if (error) {
-      alert("Có lỗi xảy ra!");
-    } else {
-      alert("Đăng ký thành công!");
-      document.getElementById("email").value = "";
-    }
+  if(!phone){
+    alert("Nhập số điện thoại");
+    return;
   }
+
+  const { error } = await supabaseClient
+    .from("leads")
+    .insert([{ phone }]);
+
+  if(error){
+    alert("Lỗi!");
+  }else{
+    alert("Đã gửi! Chúng tôi sẽ liên hệ sớm.");
+  }
+}
 </script>
 
 </body>
