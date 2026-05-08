@@ -1,99 +1,282 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trốn phố 1 đêm</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Trốn phố 1 đêm | VnCamper</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+
+*{
   margin:0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background:#0f0f0f;
-  color:#fff;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.container {
-  max-width: 900px;
+body{
+  font-family:'Be Vietnam Pro',sans-serif;
+  background:#0f0f0f;
+  color:#fff;
+  line-height:1.7;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+.container{
+  width:100%;
+  max-width:1100px;
   margin:auto;
+  padding:0 20px;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.8)),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px;
   padding:20px;
 }
 
-.hero {
-  text-align:center;
-  padding:80px 20px 50px;
+.badge{
+  display:inline-block;
+  background:#ff7a00;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:13px;
+  margin-bottom:20px;
+  font-weight:600;
 }
 
-.hero h1 {
-  font-size:36px;
+.hero h1{
+  font-size:58px;
+  line-height:1.15;
+  margin-bottom:20px;
+  font-weight:700;
+}
+
+.hero p{
+  font-size:20px;
+  opacity:.9;
+  margin-bottom:14px;
+}
+
+.btn{
+  display:inline-block;
+  background:#ff7a00;
+  color:#fff;
+  padding:18px 32px;
+  border-radius:12px;
+  font-weight:700;
+  margin-top:25px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#ff922e;
+  transform:translateY(-2px);
+}
+
+.hero-note{
+  margin-top:16px;
+  opacity:.75;
+  font-size:14px;
+}
+
+/* SECTION */
+
+.section{
+  padding:90px 0;
+}
+
+.section-dark{
+  background:#151515;
+}
+
+.section-title{
+  font-size:42px;
+  margin-bottom:20px;
   line-height:1.3;
 }
 
-.hero p {
-  opacity:0.8;
-  font-size:18px;
+.section-sub{
+  opacity:.8;
+  max-width:700px;
+  margin-bottom:50px;
 }
 
-.btn {
-  display:inline-block;
-  margin-top:20px;
-  padding:16px 28px;
-  background:#ff7a00;
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:8px;
+/* GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
 }
 
-.btn:hover {
-  background:#ff8f1f;
+/* CARD */
+
+.card{
+  background:#1b1b1b;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.06);
 }
 
-.section {
-  padding:40px 20px;
+.card-content{
+  padding:24px;
 }
 
-.card {
-  background:#1c1c1c;
-  padding:20px;
-  border-radius:12px;
-  margin-bottom:20px;
+.card h3{
+  margin-bottom:12px;
+  font-size:22px;
 }
 
-.highlight {
-  color:#ff7a00;
-  font-weight:bold;
+.card p{
+  opacity:.8;
 }
 
-.image {
-  width:100%;
-  border-radius:12px;
-  margin-top:15px;
+.card-image{
+  height:260px;
+  object-fit:cover;
 }
 
-.badge {
-  display:inline-block;
-  background:#ff7a00;
-  padding:5px 10px;
-  border-radius:6px;
-  font-size:12px;
+/* FEATURE */
+
+.feature-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+
+.feature{
+  background:#1a1a1a;
+  padding:24px;
+  border-radius:16px;
+}
+
+.feature h4{
   margin-bottom:10px;
 }
 
-.cta-fixed {
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  background:#111;
-  padding:12px;
-  text-align:center;
-  border-top:1px solid #333;
+/* BIG IMAGE */
+
+.big-image{
+  margin-top:40px;
+  border-radius:24px;
+  overflow:hidden;
 }
 
-.small {
+/* PRICE */
+
+.price-box{
+  background:#1c1c1c;
+  padding:40px;
+  border-radius:24px;
+  text-align:center;
+  margin-top:40px;
+}
+
+.price{
+  font-size:54px;
+  font-weight:700;
+  color:#ff7a00;
+}
+
+.small{
+  opacity:.7;
+  margin-top:10px;
+}
+
+/* CTA */
+
+.cta{
+  position:relative;
+  padding:120px 20px;
+  text-align:center;
+  overflow:hidden;
+}
+
+.cta::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+  linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.85)),
+  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.cta-inner{
+  position:relative;
+  z-index:2;
+}
+
+.cta h2{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:40px 20px;
+  text-align:center;
+  background:#0b0b0b;
+  color:#888;
   font-size:14px;
-  opacity:0.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .section-title{
+    font-size:32px;
+  }
+
+  .cta h2{
+    font-size:34px;
+  }
+
+  .price{
+    font-size:42px;
+  }
+
 }
 
 </style>
@@ -101,133 +284,291 @@ body {
 
 <body>
 
-<div class="container">
-
 <!-- HERO -->
-<div class="hero">
-  <div class="badge">🔥 Trải nghiệm cuối tuần mới</div>
 
-  <h1>Trốn phố 1 đêm<br>trong một chiếc van</h1>
+<section class="hero">
 
-  <p>Không cần kế hoạch<br>Không cần đi xa<br>Chỉ cần 1 đêm cho riêng bạn</p>
+  <div class="hero-content">
 
-  <a href="https://m.me/yourlink" class="btn">👉 Inbox giữ chỗ ngay</a>
+    <div class="badge">
+      🚐 Trải nghiệm cuối tuần mới
+    </div>
 
-  <p class="small">⚠️ Chỉ 1–2 xe mỗi tuần</p>
-</div>
+    <h1>
+      Trốn phố 1 đêm<br>
+      trong một chiếc van
+    </h1>
 
-<!-- SOCIAL PROOF -->
-<div class="section">
-  <div class="card">
-    <p>“Tưởng không có gì, mà đi xong thấy đáng thật sự.”</p>
-    <p class="small">– Khách test đầu tiên</p>
+    <p>
+      Không cần kế hoạch phức tạp.<br>
+      Không cần đi thật xa.
+    </p>
+
+    <p>
+      Chỉ cần 1 đêm cho riêng bạn.
+    </p>
+
+    <a href="https://m.me/yourfacebook" class="btn">
+      👉 Inbox giữ chỗ ngay
+    </a>
+
+    <div class="hero-note">
+      ⚠️ Mỗi tuần chỉ nhận số lượng booking giới hạn
+    </div>
+
   </div>
-</div>
+
+</section>
 
 <!-- PROBLEM -->
-<div class="section">
-  <h2>Cuối tuần của bạn thường như thế nào?</h2>
 
-  <div class="card">
-    - Muốn đi đâu đó nhưng lười plan<br>
-    - Muốn chill nhưng không biết đi đâu<br>
-    - Cuối cùng… lại ở nhà
+<section class="section">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Cuối tuần của bạn thường như thế nào?
+    </h2>
+
+    <p class="section-sub">
+      Muốn đi đâu đó nhưng lười plan.
+      Muốn chill nhưng không biết đi đâu.
+      Và cuối cùng... lại ở nhà.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <img class="card-image"
+        src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Khách sạn quá quen</h3>
+          <p>
+            Đi nghỉ nhưng cảm giác không còn gì mới.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-image"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Camping quá phức tạp</h3>
+          <p>
+            Đồ đạc lỉnh kỉnh, setup mệt mỏi.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-image"
+        src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Bạn chỉ muốn chill</h3>
+          <p>
+            Một nơi riêng tư để sống chậm lại.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
-  <p class="highlight">Không phải bạn không muốn đi… chỉ là quá phiền để bắt đầu.</p>
-</div>
+</section>
 
 <!-- SOLUTION -->
-<div class="section">
-  <h2>Giải pháp đơn giản hơn</h2>
 
-  <div class="card">
-    Một chiếc van đã setup sẵn:
+<section class="section section-dark">
 
-    <ul>
-      <li>🛏️ Giường ngủ</li>
-      <li>💡 Đèn chill</li>
-      <li>🪵 Nội thất gỗ</li>
-      <li>🪟 View mở</li>
-    </ul>
+  <div class="container">
 
-    👉 Bạn chỉ việc lái đi
+    <h2 class="section-title">
+      Đây là cách đơn giản hơn
+    </h2>
+
+    <p class="section-sub">
+      Một chiếc camper van đã setup sẵn cho bạn.
+      Bạn chỉ cần lái đi và tận hưởng.
+    </p>
+
+    <div class="feature-list">
+
+      <div class="feature">
+        <h4>🛏️ Giường ngủ êm</h4>
+        <p>Không gian đủ cho 2–4 người chill thoải mái.</p>
+      </div>
+
+      <div class="feature">
+        <h4>💡 Đèn vàng chill</h4>
+        <p>Buổi tối cực “vibe” để thư giãn và chụp ảnh.</p>
+      </div>
+
+      <div class="feature">
+        <h4>🪵 Nội thất tối giản</h4>
+        <p>Phong cách gỗ sáng, ấm và dễ chịu.</p>
+      </div>
+
+      <div class="feature">
+        <h4>🪟 View mở thiên nhiên</h4>
+        <p>Mở cửa sau là có một góc chill riêng.</p>
+      </div>
+
+    </div>
+
+    <div class="big-image">
+      <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1600&auto=format&fit=crop">
+    </div>
+
   </div>
-</div>
+
+</section>
 
 <!-- EXPERIENCE -->
-<div class="section">
-  <h2>Trải nghiệm thực tế</h2>
 
-  <div class="card">
-    - Ngồi cửa sau uống cafe<br>
-    - Nghe nhạc buổi tối<br>
-    - Nằm nhìn ra ngoài<br>
-    - Sáng dậy giữa thiên nhiên
+<section class="section">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Không phải thuê xe.<br>
+      Đây là một trải nghiệm.
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img class="card-image"
+        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Ngồi cửa sau uống cafe</h3>
+          <p>
+            Một buổi sáng chậm hơn bình thường.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-image"
+        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Nghe nhạc buổi tối</h3>
+          <p>
+            Ánh đèn vàng và một playlist thật chill.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-image"
+        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Thức dậy giữa thiên nhiên</h3>
+          <p>
+            Không tiếng còi xe. Không deadline.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
-  <p class="highlight">Không cần xa – chỉ cần khác.</p>
-</div>
+</section>
 
-<!-- VALUE STACK -->
-<div class="section">
-  <h2>Bạn nhận được gì?</h2>
+<!-- PACKAGE -->
 
-  <div class="card">
-    🚐 Xe camper đã setup<br>
-    🛏️ Nệm + chăn<br>
-    📍 List địa điểm chill<br>
-    📋 Hướng dẫn đầy đủ
+<section class="section section-dark">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Bạn nhận được gì?
+    </h2>
+
+    <div class="grid">
+
+      <div class="feature">
+        🚐 Xe camper đã setup
+      </div>
+
+      <div class="feature">
+        🛏️ Nệm + chăn + gối
+      </div>
+
+      <div class="feature">
+        📍 List địa điểm chill
+      </div>
+
+      <div class="feature">
+        📋 Hướng dẫn sử dụng
+      </div>
+
+      <div class="feature">
+        💡 Đèn + không gian chill
+      </div>
+
+      <div class="feature">
+        🧭 Support trước chuyến đi
+      </div>
+
+    </div>
+
+    <div class="price-box">
+
+      <div class="price">
+        1.2 – 1.5tr
+      </div>
+
+      <div class="small">
+        / đêm · 2 người · cuối tuần
+      </div>
+
+      <a href="https://m.me/yourfacebook" class="btn">
+        👉 Nhắn tin giữ xe
+      </a>
+
+    </div>
+
   </div>
 
-  <p class="highlight">→ Không cần chuẩn bị gì</p>
-</div>
-
-<!-- PRICE -->
-<div class="section">
-  <h2>Chi phí</h2>
-
-  <div class="card">
-    <p><strong>1.2 – 1.5 triệu / đêm</strong></p>
-
-    <p class="small">
-      (2 người – cuối tuần)
-    </p>
-  </div>
-</div>
-
-<!-- OBJECTION HANDLING -->
-<div class="section">
-  <h2>Bạn đang nghĩ:</h2>
-
-  <div class="card">
-    “Có đáng không?”<br><br>
-
-    👉 Nếu bạn chỉ ở nhà → không có gì xảy ra<br>
-    👉 Nếu bạn đi → bạn có 1 trải nghiệm mới
-  </div>
-</div>
+</section>
 
 <!-- FINAL CTA -->
-<div class="section">
-  <h2>Cuối tuần này bạn muốn gì?</h2>
 
-  <div class="card">
-    Ở nhà như cũ<br>
-    hay thử 1 điều khác?
+<section class="cta">
+
+  <div class="cta-inner">
+
+    <h2>
+      Cuối tuần này<br>
+      bạn muốn ở nhà...<br>
+      hay trải nghiệm một điều khác?
+    </h2>
+
+    <a href="https://m.me/yourfacebook" class="btn">
+      📩 Inbox đặt lịch ngay
+    </a>
+
+    <div class="hero-note">
+      ⚠️ Xe rất ít – ưu tiên người đặt sớm
+    </div>
+
   </div>
 
-  <a href="https://m.me/yourlink" class="btn">👉 Nhắn tin giữ xe</a>
+</section>
 
-  <p class="small">⚠️ Xe rất ít – ưu tiên người đặt trước</p>
-</div>
+<footer>
 
-</div>
+  © VnCamper.vn — Weekend Camper Experience
 
-<!-- FIXED CTA -->
-<div class="cta-fixed">
-  <a href="https://m.me/yourlink" class="btn">📩 Inbox đặt lịch</a>
-</div>
+</footer>
 
 </body>
 </html>
